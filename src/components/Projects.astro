@@ -1,0 +1,88 @@
+---
+const PROJECTS = [
+  {
+    name: 'GymScript',
+    description:
+      'GymScript es un proyecto que desarrollamos junto con un grupo de compañeros de la universidad. Es una aplicación web que permite a los usuarios suscribirse a un plan de entrenamiento de manera onnline.',
+    image: '../public/gymscript.jpg',
+    link: 'https://francosanchez.me/gymScriptFE/home',
+    tags: ['AngularJS', 'TypeScript', 'NodeJS', 'ExpressJS']
+  },
+  {
+    name: 'INNOVA',
+    description:
+      'Página web desarrollada para INNOVA, un grupo de médicos especializados en cirugía robótica.',
+    image: '../public/innova.jpg',
+    link: 'https://innova-cirugia-robotica.com.ar/',
+    tags: ['AngularJS', 'TypeScript', 'HTML', 'CSS']
+  }
+]
+---
+
+<ol>
+  {
+    PROJECTS.map((project) => (
+      <li>
+        <a class="img-container" href={project.link}>
+          <img src={project.image} alt={project.name} />
+        </a>
+        <div class="details-container">
+          <h3>{project.name}</h3>
+          <p>{project.description}</p>
+          {project.tags.map((tag) => (
+            <span>{tag}</span>
+          ))}
+        </div>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  li {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  .img-container {
+    border-radius: 20px;
+  }
+  .img-container {
+    overflow: hidden;
+  }
+  img {
+    width: 475px;
+    height: auto;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+  .details-container {
+    width: 50%;
+  }
+  h3 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+  }
+  p {
+    font-size: 16px;
+    margin: 20px 0;
+    color: #acacac;
+  }
+  span {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    margin-right: 10px;
+    padding: 4px 20px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+</style>

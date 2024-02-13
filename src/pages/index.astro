@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Section from '../components/Section.astro'
+import Education from '../components/Education.astro'
+import Hero from '../components/Hero.astro'
+import Code from '../components/icons/Code.astro'
+import EducationIcon from '../components/icons/EducationIcon.astro'
+import Projects from '../components/Projects.astro'
+---
+
+<Layout title="Mi Portafolio - Nicolás Fani">
+  <Section>
+    <Hero />
+  </Section>
+  <Section id="education">
+    <div class="text-container">
+      <EducationIcon />
+      <h2 class="section-title text-4xl">Educación</h2>
+    </div>
+    <Education />
+  </Section>
+  <Section id="projects">
+    <div class="text-container">
+      <Code />
+      <h2 class="section-title text-4xl">Proyectos</h2>
+    </div>
+    <Projects />
+  </Section>
+</Layout>
+
+<style>
+  .text-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+  .section-title {
+    font-weight: 600;
+    color: #fff;
+  }
+</style>

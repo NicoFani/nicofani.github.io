@@ -1,0 +1,103 @@
+---
+import World from './icons/World.astro'
+---
+
+<header id="header">
+  <div class="nav-container">
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- <div class="language-container">
+    <World />
+    <select>
+      <option value="en">EN</option>
+      <option value="es">ES</option>
+    </select>
+  </div> -->
+</header>
+
+<style>
+  header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+  }
+  .scroll {
+    position: fixed;
+    background: #000;
+    z-index: 1000;
+  }
+  .nav-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+  }
+  li {
+    font-size: 1.2rem;
+  }
+  a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+  }
+  a:hover {
+    padding-bottom: 5px;
+    border-bottom: 3.5px solid #bd00ff;
+  }
+  .language-container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 5px 20px;
+  }
+  select {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  option {
+    background: #000;
+    border: none;
+    outline: none;
+  }
+
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-gray-300/60 dark:bg-gray-800/60 ring-white/10;
+    }
+  }
+</style>
+
+<!-- <script>
+  const header = document.querySelector('#header')
+
+  document.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      header.classList.add('scroll')
+    } else {
+      header.classList.remove('scroll')
+    }
+  })
+</script> -->

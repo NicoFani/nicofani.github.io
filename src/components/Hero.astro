@@ -1,0 +1,94 @@
+---
+import SocialPill from './SocialPill.astro'
+import LinkedIn from './icons/LinkedIn.astro'
+import MailIcon from './icons/MailIcon.astro'
+---
+
+<div class="container">
+  <div class="img-container">
+    <img src="public/nico_photo.png" alt="Nicolás Fani" />
+  </div>
+  <div class="text-container">
+    <span>¡Hola! Soy Nicolás Fani.</span>
+    <p>
+      <strong
+        >Desarrollador Front-End y estudiante de Ingeniería en Sistemas.</strong
+      >
+      Especializado en crear potentes aplicaciones web.
+    </p>
+    <nav>
+      <SocialPill link="mailto:nicolasfani87@gmail.com">
+        <MailIcon />
+        Contactame
+      </SocialPill>
+      <SocialPill
+        link="https://www.linkedin.com/in/nicol%C3%A1s-fani-300808220/"
+      >
+        <LinkedIn />
+        LinkedIn
+      </SocialPill>
+    </nav>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-container {
+    width: 50%;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  span {
+    color: #fff;
+    margin: 50px auto;
+    width: max-content;
+    border-right: 3px solid;
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation:
+      typing 3s steps(24),
+      blink 0.5s step-end infinite alternate;
+  }
+
+  @keyframes typing {
+    from {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: #fff;
+    text-wrap: pretty;
+    margin-top: 20px;
+  }
+
+  strong {
+    font-size: 1.5rem;
+    color: #d768ff;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+const EDUCATION = [
+  {
+    school: 'Universidad Teconológica Nacional',
+    date: '2021 - Actualmente',
+    description:
+      'Me encuentro cursando la carrera de Ingeniería en Sistemas de Información. En la cual he adquirido conocimientos en programación, base de datos, redes, entre otros.'
+  },
+  {
+    school: 'E.E.S.O.P.I N° 3038',
+    date: '2015 - 2020',
+    description:
+      'En mi educación secundaria aprendí a trabajar en equipo, a ser responsable y a cumplir con mis obligaciones. Además, adquirí conocimientos en matemáticas, física, química, entre otros.'
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EDUCATION.map((education) => (
+      <li class="ms-4">
+        <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5" />
+        <time class="mb-1 text-xl font-normal leading-none text-gray-400 dark:text-gray-300">
+          {education.date}
+        </time>
+        <h3 class="text-3xl font-semibold">{education.school}</h3>
+        <p class="mb-4 text-xl font-normal text-gray-500 dark:text-gray-400">
+          {education.description}
+        </p>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  ol {
+    margin-left: 16px;
+  }
+  li {
+    margin-bottom: 40px;
+  }
+  div {
+    background-color: #d768ff;
+  }
+  h3 {
+    margin: 4px 0;
+    color: #d768ff;
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+import GitHub from './icons/GitHub.astro'
+import LinkedIn from './icons/LinkedIn.astro'
+---
+
+<footer>
+  <div class="name-container">
+    <span>Nicolás Fani<strong>.</strong></span>
+    <div class="social-container">
+      <a><LinkedIn /></a>
+      <a><GitHub /></a>
+    </div>
+  </div>
+  <div class="nav-container">
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  footer {
+    width: 100%;
+    padding: 30px 100px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0b0a2b;
+  }
+  div {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .name-container {
+    display: flex;
+    align-items: center;
+  }
+  span {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  strong {
+    color: #d768ff;
+  }
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  li {
+    list-style: none;
+    margin: 10px 0;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  a:hover {
+    color: #d768ff;
+  }
+  .social-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .social-container h3 {
+    margin-bottom: 10px;
+  }
+</style>
