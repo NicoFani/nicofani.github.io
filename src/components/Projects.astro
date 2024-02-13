@@ -29,11 +29,9 @@ const PROJECTS = [
         <div class="details-container">
           <h3>{project.name}</h3>
           <p>{project.description}</p>
-          <div class="tags-container">
-            {project.tags.map((tag) => (
-              <span>{tag}</span>
-            ))}
-          </div>
+          {project.tags.map((tag) => (
+            <span>{tag}</span>
+          ))}
         </div>
       </li>
     ))
@@ -75,9 +73,6 @@ const PROJECTS = [
     margin: 20px 0;
     color: #acacac;
   }
-  .tags-container {
-    display-wrap: wrap;
-  }
   span {
     font-size: 0.8rem;
     letter-spacing: 0.5px;
@@ -103,11 +98,17 @@ const PROJECTS = [
 
   @media (max-width: 768px) {
     ol {
-      width: 100%;
+      width: 90%;
     }
     span {
       font-size: 0.75rem;
       padding: 4px 10px;
+    }
+  }
+  @media (max-width: 420px) {
+    span {
+      font-size: 0.7rem;
+      padding: 4px 6px;
     }
   }
 </style>
