@@ -27,11 +27,16 @@ import World from './icons/World.astro'
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 0;
+    margin: 20px 0;
+    padding: 10px 0;
   }
   .scroll {
+    width: max-content;
     position: fixed;
-    background: #000;
+    margin: 20px 0;
+    padding: 10px 30px;
+    background-color: #adadad9f;
+    border-radius: 40px;
     z-index: 1000;
   }
   .nav-container {
@@ -45,7 +50,7 @@ import World from './icons/World.astro'
     gap: 50px;
   }
   li {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   a {
     font-weight: 600;
@@ -54,7 +59,7 @@ import World from './icons/World.astro'
   }
   a:hover {
     padding-bottom: 5px;
-    border-bottom: 3.5px solid #bd00ff;
+    color: #d768ff;
   }
   .language-container {
     display: flex;
@@ -76,21 +81,9 @@ import World from './icons/World.astro'
     border: none;
     outline: none;
   }
-
-  nav {
-    animation: nav-shadown 1s linear both;
-    animation-timeline: scroll();
-    animation-range: 0 100px;
-  }
-
-  @keyframes nav-shadown {
-    to {
-      @apply shadow-lg ring-1 backdrop-blur bg-gray-300/60 dark:bg-gray-800/60 ring-white/10;
-    }
-  }
 </style>
 
-<!-- <script>
+<script>
   const header = document.querySelector('#header')
 
   document.addEventListener('scroll', () => {
@@ -100,4 +93,4 @@ import World from './icons/World.astro'
       header.classList.remove('scroll')
     }
   })
-</script> -->
+</script>

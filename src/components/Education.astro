@@ -18,7 +18,7 @@ const EDUCATION = [
 <ol class="relative border-s border-gray-200 dark:border-gray-700">
   {
     EDUCATION.map((education) => (
-      <li class="ms-4">
+      <li class="ms-5">
         <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5" />
         <time class="mb-1 text-xl font-normal leading-none text-gray-400 dark:text-gray-300">
           {education.date}
@@ -45,5 +45,17 @@ const EDUCATION = [
   h3 {
     margin: 4px 0;
     color: #d768ff;
+  }
+
+  @media (max-width: 768px) {
+    time {
+      font-size: 16px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+    }
   }
 </style>

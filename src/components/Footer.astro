@@ -7,16 +7,18 @@ import LinkedIn from './icons/LinkedIn.astro'
   <div class="name-container">
     <span>Nicolás Fani<strong>.</strong></span>
     <div class="social-container">
-      <a><LinkedIn /></a>
-      <a><GitHub /></a>
+      <a href="https://www.linkedin.com/in/nicol%C3%A1s-fani-300808220/"
+        ><LinkedIn /></a
+      >
+      <a href="https://github.com/NicoFani"><GitHub /></a>
     </div>
   </div>
   <div class="nav-container">
     <nav>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a class="nav-item" href="#">Inicio</a></li>
+        <li><a class="nav-item" href="#projects">Proyectos</a></li>
+        <li><a class="nav-item" href="#contact">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -37,6 +39,9 @@ import LinkedIn from './icons/LinkedIn.astro'
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  a:hover {
+    scale: 1.1;
   }
   .name-container {
     display: flex;
@@ -62,8 +67,9 @@ import LinkedIn from './icons/LinkedIn.astro'
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
+    cursor: pointer;
   }
-  a:hover {
+  .nav-item:hover {
     color: #d768ff;
   }
   .social-container {
@@ -75,5 +81,25 @@ import LinkedIn from './icons/LinkedIn.astro'
 
   .social-container h3 {
     margin-bottom: 10px;
+  }
+
+  @media (max-width: 520px) {
+    footer {
+      padding: 30px 20px;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .name-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .nav-container {
+      margin-top: 20px;
+    }
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 </style>

@@ -29,9 +29,11 @@ const PROJECTS = [
         <div class="details-container">
           <h3>{project.name}</h3>
           <p>{project.description}</p>
-          {project.tags.map((tag) => (
-            <span>{tag}</span>
-          ))}
+          <div class="tags-container">
+            {project.tags.map((tag) => (
+              <span>{tag}</span>
+            ))}
+          </div>
         </div>
       </li>
     ))
@@ -73,6 +75,9 @@ const PROJECTS = [
     margin: 20px 0;
     color: #acacac;
   }
+  .tags-container {
+    display-wrap: wrap;
+  }
   span {
     font-size: 0.8rem;
     letter-spacing: 0.5px;
@@ -84,5 +89,25 @@ const PROJECTS = [
     box-shadow:
       rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
       rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  @media (max-width: 1400px) {
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .details-container {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    ol {
+      width: 100%;
+    }
+    span {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+    }
   }
 </style>

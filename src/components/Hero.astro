@@ -9,7 +9,7 @@ import MailIcon from './icons/MailIcon.astro'
     <img src="/nico_photo.webp" alt="Nicolás Fani" />
   </div>
   <div class="text-container">
-    <span>¡Hola! Soy Nicolás Fani.</span>
+    <span>¡Hola! Soy Nicolás.</span>
     <p>
       <strong
         >Desarrollador Front-End y estudiante de Ingeniería en Sistemas.</strong
@@ -34,11 +34,12 @@ import MailIcon from './icons/MailIcon.astro'
 <style>
   .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .img-container {
-    width: 50%;
+    width: 100%;
   }
   img {
     width: 200px;
@@ -52,7 +53,7 @@ import MailIcon from './icons/MailIcon.astro'
     margin: 50px auto;
     width: max-content;
     border-right: 3px solid;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     animation:
       typing 3s steps(24),
@@ -75,14 +76,14 @@ import MailIcon from './icons/MailIcon.astro'
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #fff;
     text-wrap: pretty;
     margin-top: 20px;
   }
 
   strong {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #d768ff;
   }
 
@@ -90,5 +91,12 @@ import MailIcon from './icons/MailIcon.astro'
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
+  }
+
+  @media (max-width: 1400px) {
+    img {
+      width: 150px;
+      height: 150px;
+    }
   }
 </style>
