@@ -12,7 +12,7 @@ import MailIcon from "./icons/MailIcon.astro";
     <span>¡Hola! Soy Nicolás.</span>
     <p>
       <strong
-        >Estudiante Avanzado de Ingeniería en Sistemas de Información</strong
+        >Estudiante Avanzado de Ingeniería en Sistemas de Información.</strong
       >
       Desarrollo de Software & Análisis de Datos
     </p>
@@ -59,7 +59,16 @@ import MailIcon from "./icons/MailIcon.astro";
       typing 3s steps(24),
       blink 0.5s step-end infinite alternate;
   }
-
+  p {
+    font-size: 2rem;
+    color: #fff;
+    text-wrap: pretty;
+    margin-top: 20px;
+  }
+  strong {
+    font-size: 5rem;
+    color: #d768ff;
+  }
   @keyframes typing {
     from {
       clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
@@ -83,7 +92,7 @@ import MailIcon from "./icons/MailIcon.astro";
   }
 
   strong {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #d768ff;
   }
 
